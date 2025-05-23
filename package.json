@@ -14,5 +14,8 @@
     "astro": "^5.8.0",
     "astro-seo": "^0.8.4",
     "tailwindcss": "^4.1.7"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.9.5"
   }
 }
