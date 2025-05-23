@@ -1,0 +1,26 @@
+---
+import { siteConfig } from "../siteConfig.ts";
+import { Image } from "astro:assets";
+---
+
+<div class="flex justify-center items-center text-center">
+  <div
+    class="flex flex-col items-start pt-5 text-left text-[15px] font-normal text-body leading-[21px]"
+  >
+    <Image
+      loading="eager"
+      fetchpriority="high"
+      width={120}
+      height={120}
+      src={siteConfig.bio.image}
+      class="w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] rounded-full mb-5 object-cover"
+      alt={siteConfig.bio.name + " Profile"}
+    />
+    <h1 class="text-2xl font-medium text-title mb-5 text-left">
+      {siteConfig.bio.title}
+    </h1>
+    <p class="text-sm leading-relaxed text-body text-left">
+      {siteConfig.bio.body}
+    </p>
+  </div>
+</div>

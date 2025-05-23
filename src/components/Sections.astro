@@ -1,0 +1,36 @@
+---
+import { siteConfig } from "../siteConfig.ts";
+import type { LinkItem } from "../lib/types.ts";
+import OpenInNewTabIcon from "../assets/open-in-new-tab-icon.svg";
+---
+
+<!-- Creating Section -->
+<div
+  class="flex flex-col text-left text-sm font-normal text-body leading-normal pt-20 pb-8"
+>
+  <div class="text-sm font-medium text-sectionName mb-5 text-left">
+    Building
+  </div>
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
+    {
+      siteConfig.projects.map((item: LinkItem) => (
+        <div class="flex flex-col grow shrink basis-auto flex-nowrap content-start items-stretch justify-start p-0 m-0 w-full h-auto max-w-full gap-2 bg-transparent text-sm text-body leading-normal text-start antialiased outline-none">
+          <h2 class="flex justify-between items-center">
+            <a
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 group"
+            >
+              <span class="text-lg font-semibold text-title">{item.title}</span>
+              <OpenInNewTabIcon class="h-3 w-3 text-body" />
+            </a>
+          </h2>
+          <p class="text-sm text-body leading-relaxed flex-grow">
+            {item.description}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</div>

@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sectionName: #636f84;
+  --color-title: #2C3136;
+  --color-body: #434A54;
+  --color-textFooter: #636f84;
+}

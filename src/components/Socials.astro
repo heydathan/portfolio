@@ -1,0 +1,27 @@
+---
+import { siteConfig } from "../siteConfig.ts";
+import { Image } from "astro:assets";
+---
+
+<div class="py-6 mb-8">
+  <div class="text-sm font-medium text-sectionName mb-5 text-left">Contact</div>
+  <div class="flex flex-wrap justify-start gap-4">
+    {
+      siteConfig.socials.map((social) => (
+        <a
+          class="inline-flex items-center gap-2 py-2 rounded-full text-sm text-body hover:no-underline"
+          href={social.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src={social.icon}
+            alt={`${social.name} logo`}
+            class="h-4 w-4"
+          />
+          <span>{social.name}</span>
+        </a>
+      ))
+    }
+  </div>
+</div>

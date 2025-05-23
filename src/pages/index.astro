@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Bio from "../components/Bio.astro";
+import Sections from "../components/Sections.astro";
+import Socials from "../components/Socials.astro";
+---
+
+<Layout>
+  <Fragment>
+    <div class="w-full">
+      <Bio />
+
+      <div class="flex flex-col w-full">
+        <Sections />
+        <Socials />
+      </div>
+    </div>
+  </Fragment>
+</Layout>
